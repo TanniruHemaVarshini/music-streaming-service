@@ -1,0 +1,71 @@
+{% extends 'userindex.html' %}
+{% block 'body' %}
+<html>
+<head>
+    <title>Music Player</title>
+</head>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: black;
+        }
+
+        ul {
+            list-style: none;
+            padding: ;
+            text-align: center;
+        }
+
+        li {
+            margin: 0px 0;
+            padding: 3px;
+            background-color: seashell;
+            border: 0px solid #ccc;
+            border-radius: 5px;
+            opacity: 0.9;
+            width: 50%;
+            text-align: center;
+            height: %;
+
+
+        }
+
+        audio {
+            width: 70%;
+
+
+        }
+
+        li:hover {
+            background-color: peru;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>MUSIC PLAYER</b></h1>
+    <ul>
+        {% for song in songs %}
+            <center><li align="center">
+                {{ song.title }}
+                <audio controls>
+                    <source src="{{ song.audio_file.url }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li></center>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}

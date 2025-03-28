@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: peru;
+}
+
+div.gallery {
+  margin: 5px;
+
+  float: left;
+  width: 24%;
+}
+
+
+
+div.gallery img {
+width: 100%;
+
+
+}
+body{
+background-size: cover;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  background-color: black;
+
+}
+.hr{
+width: 20px;
+}
+.container {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .panel {
+            background-color: lightgrey;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: center;
+        }
+
+        .panel h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .panel p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Add styles for the top panels */
+        .top-panels {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        /* Add animations here */
+        .panel:nth-child(odd) {
+            transform: translateY(-50px);
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+
+        .panel:nth-child(even) {
+            transform: translateY(-50px);
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body background="https://wallpapercave.com/wp/wp3159343.jpg">
+<CENTER><h1><font color="white">MUSIC STREAMING SERVICES</font></h1></CENTER>
+
+<ul>
+<li><a href="{% url 'firstpage' %}">Home</a></li>
+    <li><a href="{% url 'userregister' %}">Register</a></li>
+  <li><a href="{% url 'firstuser' %}">Login</a></li>
+  <li><a href="{% url 'firstadmin' %}">Admin Login</a></li>
+  <li style="float:right"><a class="active" href="{% url 'firstabout' %}">About</a></li>
+</ul>
+<br><center><font color="white"><h1>Welcome To The Unlimited Streaming</h1></font>
+
+</center>
+<div class="top-panels">
+        <div class="panel">
+            <h2>About Us</h2>
+            <p>A music streaming service API, or Application Programming Interface, is a powerful tool that allows developers to integrate music streaming functionality into their own applications, websites, or services. With a music streaming service API, developers can access a vast catalog of songs, albums, and playlists, enabling users to search for and play music seamlessly within their applications. These APIs provide access to features like song playback, user playlists, recommendations, and more, giving developers the ability to enhance user experiences with the world of music. Music streaming service APIs not only empower developers to build personalized and interactive music-related applications but also contribute to the growing ecosystem of digital music consumption by connecting users to their favorite tunes with ease.</p>
+        </div>
+        <div class="panel">
+            <h2>Our Mission</h2>
+            <p>Our mission is to transform the way people interact with music, making it more accessible, personalized, and enjoyable for everyone. We are dedicated to providing developers with a powerful and user-friendly tool that empowers them to create innovative music-centric applications. Through our API, we aim to connect users with an extensive catalog of songs, artists, and playlists, allowing them to discover and enjoy music in ways that resonate with their individual preferences. We're committed to facilitating seamless integration, providing real-time updates, and ensuring top-notch developer support to enable the creation of immersive music experiences.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel">
+            <h2>Our Team</h2>
+            <p>We are a diverse team of music enthusiasts, developers, designers, and music industry experts. Our collective passion for music drives us to create a platform that brings joy to people's lives through the power of music. Meet our dedicated team:</p>
+            Pardhiv Sai<br>
+            Harshavardan<br>
+            Kamisetti Sanjay
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
+
+
