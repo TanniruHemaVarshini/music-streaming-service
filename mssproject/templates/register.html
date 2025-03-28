@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block 'body' %}
+<CENTER><h3><font size="6"><u>SIGN UP</u></font></h3></CENTER>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button><a href="{% url 'send_otp' %}">Register</a></button>
+    <a href="{% url 'login' %}">Already Have an Account? Sign In Here</a>
+</form>
+{% endblock %}

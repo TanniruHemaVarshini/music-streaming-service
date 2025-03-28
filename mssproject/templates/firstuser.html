@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+li {
+  float: left;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: peru;
+}
+
+div.gallery {
+  margin: 5px;
+
+  float: left;
+  width: 24%;
+}
+
+
+
+div.gallery img {
+width: 100%;
+
+
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  background-color: black;
+
+}
+.hr{
+width: 20px;
+}
+ .attribute {
+
+    padding: 15px;
+    margin: 10px 0;
+
+    width: 30%;
+    height: 40%;
+    justify-content: center;
+    opacity: 0.7;
+    background-color: lightgrey;
+    color: black;
+
+
+}
+
+.button{
+background-color: white;
+width: 80%;
+border: none;
+cursor: pointer;
+padding: 13px 10px;
+margin: 10px 10px;
+
+}
+.button:hover{
+  background-color: peru;
+  color: white;
+  opacity: 0.8;
+}
+body{
+background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body background="https://wallpapercave.com/wp/wp3159343.jpg">
+<CENTER><h1><font color="white">MUSIC STREAMING SERVICES</font></h1></CENTER>
+
+<ul>
+ <li><a href="{% url 'firstpage' %}">Home</a></li>
+    <li><a href="{% url 'userregister' %}">Register</a></li>
+  <li><a href="{% url 'firstuser' %}">Login</a></li>
+  <li><a href="{% url 'firstadmin' %}">Admin Login</a></li>
+  <li style="float:right"><a class="active" href="{% url 'firstabout' %}">About</a></li>
+</ul>
+<br><center><font color="white"><h1>Welcome To The Unlimited Streaming</h1></font></center>
+<br><br>
+<center><div class="user">
+<center><div align="center" class="attribute">
+<form method="post" action="{% url 'checkuserlogin' %}">
+    {% csrf_token %}
+    <br>
+
+    <h1 align="center"><font color="black"><b>USER LOGIN</b></font></h1><br>
+    <table align="center"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+        <tr><td><label>Enter Username</label></td>
+        <td><big><input type="text" name="uname" required/></big></td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td><label>Enter Password</label></td>
+        <td><input type="password" name="pwd" required/></td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+         <tr align="center"><td><input type="submit" value="login" class="button"/></td>
+        <td><input type="reset" value="clear" class="button"/></td>
+         </tr></table></form>
+        </div></center></div> </center>
+
+
+
+
+
+        </table><br><br>
+    <div class="border-top pt-3" align="center">
+            <small class="text-muted">
+                <font color="white"> Need An Account?</font> <a class="ml-2" href="{% url 'userregister' %}">Sign Up Now</a>
+            </small></div>
+
+</form>
+
+
+
+</body>
+</html>
